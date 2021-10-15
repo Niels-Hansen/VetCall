@@ -35,18 +35,15 @@ class _TestPageState extends State<TestPage> {
             onPressed: null,
           ),
           const TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Username',
-            )
-          ),
+              decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Username',
+          )),
           const TextField(
             obscureText: true,
             decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Password'
-          ),
-        )
+                border: OutlineInputBorder(), labelText: 'Password'),
+          )
         ],
       ),
     )));
