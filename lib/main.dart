@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'testpage.dart';
+import 'loginpage.dart';
 
-void main() {}
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -13,6 +16,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.green,
         ),
-        home: TestPage());
+        home: LoginPage());
   }
 }
