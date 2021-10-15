@@ -11,7 +11,7 @@ class _TestPageState extends State<TestPage> {
     return (SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'VetCall',
           style: TextStyle(
               fontSize: 55.0, fontFamily: 'Signatra', color: Colors.white),
@@ -19,14 +19,34 @@ class _TestPageState extends State<TestPage> {
         centerTitle: true,
       ),
       body: Column(
-        children: [
+        children: const [
           RaisedButton(
             child: Text(
-              'Answer 1',
+              'Log in',
               style: TextStyle(color: Colors.blue),
             ),
             onPressed: null,
           ),
+          RaisedButton(
+            child: Text(
+              'Register',
+              style: TextStyle(color: Colors.blue),
+            ),
+            onPressed: null,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Username',
+            )
+          ),
+          const TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Password'
+          ),
+        )
         ],
       ),
     )));
