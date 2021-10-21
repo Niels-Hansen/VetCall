@@ -10,7 +10,7 @@ class _TestPageState extends State<TestPage> {
   Widget build(BuildContext context) {
     return (SafeArea(
         child: Scaffold(
-      appBar: AppBar(
+          appBar: AppBar(
         title: Text(
           'VetCall',
           style: TextStyle(

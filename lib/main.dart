@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'testpage.dart';
 
 void main() {
@@ -15,6 +14,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.green,
         ),
-        home: TestPage());
+        home: TestPage()
+    );
   }
 }
