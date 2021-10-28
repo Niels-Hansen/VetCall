@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'testpage.dart';
-import 'loginpage.dart';
+import 'test_page.dart';
+import 'login_page.dart';
 import 'account_type_page.dart';
 
 void main() {
