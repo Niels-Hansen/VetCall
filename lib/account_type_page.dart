@@ -15,28 +15,36 @@ class _AccountTypePageState extends State<AccountTypePage> {
       width: 375,
       height: 667,
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.white, width: 1),
+          border: Border.all(color: Colors.white, width: 30),
           color: Colors.white),
       child: Column(
         children: [
           Container(
             width: 72,
             height: 30,
+            child: Image.asset('images/logo_cover.png'),
           ),
-          const Text("Choose Account Type",
+          Container(
+            height: 20,
+          ),
+          const Text("Choose account type",
+              textAlign: TextAlign.center,
               style: TextStyle(
                   color: Color(0xff88d9de),
                   fontWeight: FontWeight.w500,
                   fontFamily: "HelveticaNeue",
                   fontStyle: FontStyle.normal,
-                  fontSize: 50.0)),
+                  fontSize: 45.0)),
+          Container(
+            height: 100,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                   width: 142,
                   height: 126,
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       border: Border.all(color: Color(0xff88d9de), width: 1),
@@ -50,8 +58,11 @@ class _AccountTypePageState extends State<AccountTypePage> {
                               fontFamily: "HelveticaNeue",
                               fontStyle: FontStyle.normal,
                               fontSize: 31.0)),
+                      Container(
+                        height: 10,
+                      ),
                       Icon(
-                        Icons.person,
+                        Icons.local_hospital,
                         size: 50.0,
                         color: Colors.white,
                       ),
@@ -60,7 +71,7 @@ class _AccountTypePageState extends State<AccountTypePage> {
               Container(
                 width: 142,
                 height: 126,
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   border: Border.all(color: Color(0xff88d9de), width: 1),
@@ -75,6 +86,9 @@ class _AccountTypePageState extends State<AccountTypePage> {
                         fontFamily: "HelveticaNeue",
                         fontStyle: FontStyle.normal,
                         fontSize: 31.0),
+                  ),
+                  Container(
+                    height: 10,
                   ),
                   Icon(
                     Icons.person,
