@@ -3,6 +3,7 @@ import 'dart:async';
 import 'test_page.dart';
 import 'login_page.dart';
 import 'account_type_page.dart';
+import 'video/video.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +18,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.green,
         ),
-        home: AccountTypePage());
+        home: VideoConference());
   }
 }
