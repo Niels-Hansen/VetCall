@@ -112,6 +112,13 @@ class _VetRegState extends State<VetReg> {
                     state: _currentStep >= 4 ?
                     StepState.complete : StepState.disabled,
                   ),
+                  Step(
+                    title: new Text(''),
+                    content: _PassWordForm(),
+                    isActive:_currentStep >= 0,
+                    state: _currentStep >= 5 ?
+                    StepState.complete : StepState.disabled,
+                  ),
                 ],
               ),
             ),),
@@ -127,7 +134,7 @@ class _VetRegState extends State<VetReg> {
   }
 
   continued(){
-    _currentStep < 4 ?
+    _currentStep < 5 ?
     setState(() => _currentStep += 1): null;
   }
   cancel(){
@@ -231,6 +238,24 @@ class _HourlyFeeForm extends StatelessWidget {
         )),
         TextFormField(
           decoration: const InputDecoration(border:OutlineInputBorder(), labelText: 'DKK'),
+        ),
+      ],
+    );
+  }
+}
+class _PassWordForm extends StatelessWidget {
+  const _PassWordForm({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextFormField(
+          decoration: const InputDecoration(border:OutlineInputBorder(), labelText: 'Password'),
+        ),
+        SizedBox(height: 20),
+        TextFormField(
+          decoration: const InputDecoration(border: OutlineInputBorder(), labelText: 'Confirm Password'),
         ),
       ],
     );
