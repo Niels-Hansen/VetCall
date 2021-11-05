@@ -35,8 +35,91 @@ class _ReceiptPageState extends State<ReceiptPage> {
                   fontStyle: FontStyle.normal,
                   fontSize: 45.0)),
           Container(
-            height: 100,
+            height: 50,
           ),
+          Row(children: [
+            Container(
+              width: 70,
+            ),
+            const Text("Time",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Color(0xff090909),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "HelveticaNeue",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 21.0)),
+            Container(
+              width: 62,
+            ),
+            const Text("12 min 52 sec",
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                    color: Color(0xff090909),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "HelveticaNeue",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 21.0)),
+          ]),
+          Container(
+            height: 20,
+          ),
+          Row(children: [
+            Container(
+              width: 70,
+            ),
+            const Text("Fee",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Color(0xff090909),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "HelveticaNeue",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 21.0)),
+            Container(
+              width: 62,
+            ),
+            const Text("12,3 DKK",
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                    color: Color(0xff090909),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "HelveticaNeue",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 21.0)),
+          ]),
+          Container(
+            height: 50,
+          ),
+          Row(children: [
+            Container(
+              width: 70,
+            ),
+            const Text("Total",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Color(0xff090909),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "HelveticaNeue",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 21.0)),
+            Container(
+              width: 62,
+            ),
+            const Text("12,3 DKK",
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                    color: Color(0xff090909),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "HelveticaNeue",
+                    fontStyle: FontStyle.normal,
+                    fontSize: 21.0)),
+          ]),
+          Container(
+              width: 281,
+              height: 2,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Color(0xff88d9de), width: 1))),
         ])));
   }
 }
