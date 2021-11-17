@@ -6,6 +6,10 @@ import 'package:vetcall/test_page.dart';
 import 'package:vetcall/wrapper.dart';
 import 'dart:async';
 import 'loginpage.dart';
+import 'test_page.dart';
+//import 'login_page.dart';
+//import 'account_type_page.dart';
+import 'edit_profile_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
