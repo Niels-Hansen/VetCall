@@ -16,7 +16,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return MultiProvider(
         providers: [
           Provider<AuthService>(
@@ -36,14 +35,5 @@ class MyApp extends StatelessWidget {
           },
           //home: LoginPage()),
         ));
-=======
-    return MaterialApp(
-        title: 'Test',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: Colors.green,
-        ),
-        home: LoginPage());
->>>>>>> 84865be442220ed83dbe8a4ac77a966a28757967
   }
 }
