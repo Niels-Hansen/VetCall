@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vetcall/services/auth_service.dart';
+import 'account_type_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -106,9 +107,16 @@ class _LoginPageState extends State<LoginPage> {
             height: 10,
           ),
           InkWell(
-              onTap: () async {
+              /*onTap: () async {
                 await authService.createUserWithEmailAndPassword(
                     emailController.text, passwordController.text);
+              }*/
+
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AccountTypePage()),
+                );
               },
               child: Container(
                   child: const Text(

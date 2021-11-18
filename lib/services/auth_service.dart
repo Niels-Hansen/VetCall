@@ -11,6 +11,11 @@ class AuthService {
     return User(user.uid, user.email);
   }
 
+  String? getUserId() {
+    //getting user id
+    return _firebaseAuth.currentUser?.uid.toString();
+  }
+
   Stream<User?>? get user {
     return _firebaseAuth.authStateChanges().map(_userFromFirebase);
   }
