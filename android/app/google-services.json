@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "430374304281",
+    "project_id": "vetcall-832e1",
+    "storage_bucket": "vetcall-832e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430374304281:android:a1be93c016e66ff7534888",
+        "android_client_info": {
+          "package_name": "com.example.vetcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430374304281-1kb8u0i3r1s8ssctuo8vl924g30foeh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBftFV6IrkoSQWm-uOHq2-q0XKZFJAnecw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430374304281-1kb8u0i3r1s8ssctuo8vl924g30foeh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

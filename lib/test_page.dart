@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:vetcall/services/auth_service.dart';
 
 class TestPage extends StatefulWidget {
   @override
@@ -8,6 +10,7 @@ class TestPage extends StatefulWidget {
 class _TestPageState extends State<TestPage> {
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
     return (SafeArea(
         child: Scaffold(
       appBar: AppBar(
@@ -19,7 +22,7 @@ class _TestPageState extends State<TestPage> {
         centerTitle: true,
       ),
       body: Column(
-        children: const [
+        children: [
           RaisedButton(
             child: Text(
               'Log in',
@@ -29,10 +32,12 @@ class _TestPageState extends State<TestPage> {
           ),
           RaisedButton(
             child: Text(
-              'Register',
+              'Sign out',
               style: TextStyle(color: Colors.blue),
             ),
-            onPressed: null,
+            onPressed: () {
+              authService.signOut();
+            },
           ),
           const TextField(
               decoration: InputDecoration(
