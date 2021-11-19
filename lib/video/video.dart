@@ -7,7 +7,8 @@ import 'package:agora_rtc_engine/rtc_remote_view.dart' as RtcRemoteView;
 
 const String appId = '0deef447329443ef8549b9f563c38a51';
 const String token =
-    '0060deef447329443ef8549b9f563c38a51IADPL65Fmb34eMWVaHgssvA8q2SaGSFd6Z3K7Y9VQc0l4wrCxmsAAAAAEAD3dRUDUqWGYQEAAQBTpYZh';
+    '0060deef447329443ef8549b9f563c38a51IADYj6Q6xkI5FzbJ1QDc8TqTPi6fqpmn9iodj+jMT67W1Tfn3+AAAAAAEADsTG0X9eyYYQEAAQD17Jhh';
+const String channel = "vet";
 
 class VideoConference extends StatefulWidget {
   @override
@@ -56,7 +57,7 @@ class VideoConferenceState extends State<VideoConference> {
       ),
     );
 
-    await engine.joinChannel(token, "channel1", null, 0);
+    await engine.joinChannel(token, channel, null, 0);
   }
 
   @override
