@@ -23,13 +23,13 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         children: [
           Container(
-            height: 100,
+            height: 20,
           ),
           Container(
             child: new Image.asset('images/logo.png'),
-            height: 150,
+            height: 130,
           ),
-          Container(height: 60),
+          Container(height: 10),
           Container(
             height: 30,
             child: const Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vetcall/Discover/VetCards.dart';
+import 'package:vetcall/edit_profile_page.dart';
 
 class Discover extends StatefulWidget {
   @override
@@ -22,10 +23,22 @@ class _DiscoverState extends State<Discover> {
               Row(
                 children: <Widget>[
                   IconButton(
-                    icon: Icon(Icons.menu, size: 30, color: Colors.black,),
-                    onPressed: (){},
+                    icon: Icon(
+                      Icons.menu,
+                      size: 30,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => EditProfilePage()));
+                    },
                   ),
-                  Container(margin: EdgeInsets.only(left: 150),child: Image(image: AssetImage('images/logo.png'), height: 50,)),
+                  Container(
+                      margin: EdgeInsets.only(left: 150),
+                      child: Image(
+                        image: AssetImage('images/logo.png'),
+                        height: 50,
+                      )),
                 ],
               ),
               // space between top row and text below
@@ -39,17 +52,27 @@ class _DiscoverState extends State<Discover> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: RichText(
-                    text: TextSpan(
-                        children: [
-                          TextSpan(text: 'Discover \n', style: TextStyle(fontSize: 40, fontWeight: FontWeight.w800, color: Colors.black)),
-                          TextSpan(text: 'Veterinarians near you ', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: Colors.black)),
-                        ]
-                    ),
+                    text: TextSpan(children: [
+                      TextSpan(
+                          text: 'Discover \n',
+                          style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.black)),
+                      TextSpan(
+                          text: 'Veterinarians near you ',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.black)),
+                    ]),
                   ),
                 ),
               ),
               // space..
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               // row with widgets of places to go, that the user can select.
               Center(child: VetCards()),
             ],
