@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:vetcall/user_reg.dart';
+import 'package:vetcall/vet_reg.dart';
 //change
 
 class AccountTypePage extends StatefulWidget {
@@ -12,8 +14,9 @@ class AccountTypePage extends StatefulWidget {
 class _AccountTypePageState extends State<AccountTypePage> {
   @override
   Widget build(BuildContext context) {
-    return (Container(
-      width: 375,
+    return (Scaffold(
+        body: Container(
+      width: double.infinity,
       height: 667,
       decoration: BoxDecoration(
           border: Border.all(color: Colors.white, width: 30),
@@ -23,7 +26,7 @@ class _AccountTypePageState extends State<AccountTypePage> {
           Container(
             width: 72,
             height: 30,
-            child: Image.asset('images/logo_cover.png'),
+            child: Image.asset('images/logo.png'),
           ),
           Container(
             height: 20,
@@ -42,66 +45,81 @@ class _AccountTypePageState extends State<AccountTypePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                  width: 142,
-                  height: 126,
-                  padding: const EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
+              InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => VetReg()),
+                    );
+                  },
+                  child: Container(
+                      width: 142,
+                      height: 126,
+                      padding: const EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          border:
+                              Border.all(color: Color(0xff88d9de), width: 1),
+                          color: Color(0xff88d9de)),
+                      child: Column(
+                        children: [
+                          Text("Vet",
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "HelveticaNeue",
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 31.0)),
+                          Container(
+                            height: 10,
+                          ),
+                          Icon(
+                            Icons.local_hospital,
+                            size: 50.0,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ))),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserReg()),
+                  );
+                },
+                child: Container(
+                    width: 142,
+                    height: 126,
+                    padding: const EdgeInsets.all(10.0),
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       border: Border.all(color: Color(0xff88d9de), width: 1),
-                      color: Color(0xff88d9de)),
-                  child: Column(
-                    children: [
-                      Text("Vet",
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "HelveticaNeue",
-                              fontStyle: FontStyle.normal,
-                              fontSize: 31.0)),
+                      color: Color(0xff88d9de),
+                    ),
+                    child: Column(children: [
+                      Text(
+                        "User",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "HelveticaNeue",
+                            fontStyle: FontStyle.normal,
+                            fontSize: 31.0),
+                      ),
                       Container(
                         height: 10,
                       ),
                       Icon(
-                        Icons.local_hospital,
+                        Icons.person,
                         size: 50.0,
                         color: Colors.white,
                       ),
-                    ],
-                  )),
-              Container(
-                width: 142,
-                height: 126,
-                padding: const EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                  border: Border.all(color: Color(0xff88d9de), width: 1),
-                  color: Color(0xff88d9de),
-                ),
-                child: Column(children: [
-                  Text(
-                    "User",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: "HelveticaNeue",
-                        fontStyle: FontStyle.normal,
-                        fontSize: 31.0),
-                  ),
-                  Container(
-                    height: 10,
-                  ),
-                  Icon(
-                    Icons.person,
-                    size: 50.0,
-                    color: Colors.white,
-                  ),
-                ]),
+                    ])),
               ),
             ],
           )
         ],
       ),
-    ));
+    )));
   }
 }
