@@ -9,6 +9,7 @@ class ReceiptPage extends StatefulWidget {
 }
 
 class _ReceiptPageState extends State<ReceiptPage> {
+
   @override
   Widget build(BuildContext context) {
     return (Container(
@@ -123,3 +124,5 @@ class _ReceiptPageState extends State<ReceiptPage> {
         ])));
   }
 }
+
+
