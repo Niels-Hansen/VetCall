@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:vetcall/loginpage.dart';
 import 'package:vetcall/services/auth_service.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:vetcall/wrapper.dart';
 import 'package:vetcall/models/firebase.dart';
 
 class UserReg extends StatefulWidget {

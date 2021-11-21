@@ -2,14 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vetcall/services/auth_service.dart';
-import 'package:vetcall/test_page.dart';
 import 'package:vetcall/wrapper.dart';
-import 'dart:async';
 import 'loginpage.dart';
-import 'test_page.dart';
-//import 'login_page.dart';
-//import 'account_type_page.dart';
-import 'edit_profile_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

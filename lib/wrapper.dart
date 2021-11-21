@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vetcall/Discover/Discover.dart';
 import 'package:vetcall/loginpage.dart';
-
 import 'package:vetcall/models/user_model.dart';
 import 'package:vetcall/services/auth_service.dart';
-import 'package:vetcall/test_page.dart';
-
-import 'edit_rate_page.dart';
 
 class Wrapper extends StatelessWidget {
   @override

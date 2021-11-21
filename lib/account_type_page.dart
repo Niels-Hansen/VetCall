@@ -4,7 +4,6 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:vetcall/user_reg.dart';
 import 'package:vetcall/vet_reg.dart';
-//change
 
 class AccountTypePage extends StatefulWidget {
   @override

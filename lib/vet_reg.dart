@@ -3,7 +3,6 @@ import 'package:vetcall/models/firebase.dart';
 import 'package:vetcall/services/auth_service.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:vetcall/wrapper.dart';
 
 class VetReg extends StatefulWidget {
   @override
