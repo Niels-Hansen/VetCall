@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vetcall/forgot_password_page.dart';
 import 'package:vetcall/services/auth_service.dart';
 import 'account_type_page.dart';
 
@@ -95,12 +96,18 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 alignment: Alignment.center,
               )),
-          Container(
-            child: const Text(
-              'Forgot password',
-              style: TextStyle(
-                  color: Color.fromRGBO(136, 217, 222, 1),
-                  fontFamily: 'HelveticaNeue'),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => ForgotPasswordPage()));
+            },
+            child: Container(
+              child: const Text(
+                'Forgot password',
+                style: TextStyle(
+                    color: Color.fromRGBO(136, 217, 222, 1),
+                    fontFamily: 'HelveticaNeue'),
+              ),
             ),
           ),
           Container(
