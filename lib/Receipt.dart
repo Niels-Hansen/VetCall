@@ -28,7 +28,7 @@ class Receipt extends StatelessWidget {
         child: RawMaterialButton(
           onPressed: () => leave(context),
           child: Icon(
-            Icons.call_end,
+            Icons.map,
             color: Colors.white,
             size: 35.0,
           ),

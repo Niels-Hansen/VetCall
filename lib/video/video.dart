@@ -12,7 +12,7 @@ import '../Receipt.dart';
 
 const String appId = '0deef447329443ef8549b9f563c38a51';
 const String token =
-    '0060deef447329443ef8549b9f563c38a51IADYj6Q6xkI5FzbJ1QDc8TqTPi6fqpmn9iodj+jMT67W1Tfn3+AAAAAAEADsTG0X9eyYYQEAAQD17Jhh';
+    '0060deef447329443ef8549b9f563c38a51IAB7DxihN4EI487rAoO9eMqGvMNblCRiKHGlu5JjAnGSeTfn3+AAAAAAEADsTG0XXJabYQEAAQBelpth';
 const String channel = "vet";
 
 class VideoConference extends StatefulWidget {
@@ -99,22 +99,43 @@ class VideoConferenceState extends State<VideoConference> {
           ),
           Align(
             alignment: Alignment.topLeft,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(5)),
-                border: Border.all(color: Colors.black, width: 1),
-              ),
-              child: Text(
-                formatTime(stopWatch.elapsedMilliseconds),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: "HelveticaNeue",
-                    fontStyle:  FontStyle.normal,
-                    fontSize: 25
+            child: Column(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    border: Border.all(color: Colors.black, width: 1),
+                  ),
+                  child: Text(
+                    formatTime(stopWatch.elapsedMilliseconds),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "HelveticaNeue",
+                        fontStyle:  FontStyle.normal,
+                        fontSize: 25
+                    ),
+                  ),
                 ),
-              ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    border: Border.all(color: Colors.black, width: 1),
+                  ),
+                  child: Text(
+                    formatPrice(stopWatch.elapsedMilliseconds),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "HelveticaNeue",
+                        fontStyle:  FontStyle.normal,
+                        fontSize: 25
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           Align(
@@ -158,6 +179,13 @@ class VideoConferenceState extends State<VideoConference> {
     var minutes = ((secs % 3600) ~/ 60).toString().padLeft(2, '0');
     var seconds = (secs % 60).toString().padLeft(2, '0');
     return "$hours:$minutes:$seconds";
+  }
+
+  String formatPrice(int milliseconds) {
+    final secondPrice = 500/60/60;
+    var secs = milliseconds ~/ 1000;
+    final price = (secondPrice * secs).toStringAsFixed(2);
+    return "$price DKK";
   }
 
   Widget renderLocalPreview() {
