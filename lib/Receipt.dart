@@ -120,15 +120,15 @@ class Receipt extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         fontFamily: "HelveticaNeue",
                         fontStyle: FontStyle.normal,
-                        fontSize: 21.0)),
-                Text('$secondPriceForPrint \$',
+                        fontSize: 18.0)),
+                Text('$secondPriceForPrint DKK',
                     textAlign: TextAlign.right,
                     style: TextStyle(
                         color: Color(0xff090909),
                         fontWeight: FontWeight.w500,
                         fontFamily: "HelveticaNeue",
                         fontStyle: FontStyle.normal,
-                        fontSize: 21.0)),
+                        fontSize: 18.0)),
               ]),
               Container(
                 height: 50,
@@ -148,7 +148,7 @@ class Receipt extends StatelessWidget {
                 Container(
                   width: 62,
                 ),
-                Text('$price \$',
+                Text('$price DKK',
                     textAlign: TextAlign.right,
                     style: TextStyle(
                         color: Color(0xff090909),
